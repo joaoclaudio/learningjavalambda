@@ -1,4 +1,4 @@
-package com.claudio.learninglambda;
+package com.claudio.learninglambda.lambdas_01_01;
 
 import java.util.function.*;
 
