@@ -1,6 +1,8 @@
 package com.claudio.learninglambda.lambdas_02_03;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -20,6 +22,12 @@ public class Lambdas_02_03 {
             .map(n->n*n)
             .forEach(System.out::println);
         
+        List<Integer> aList = new ArrayList();
+        aList.addAll(IntStream.rangeClosed(1, 999999).boxed().collect(Collectors.toList()));
+        aList.parallelStream()
+            .map(n->n*n)
+            .forEach(System.out::println);
+
         System.out.println("\nFind the average of the numbers squared");
         Arrays.stream(new int[]{1,2,3,4})
             .map((n -> n*n))
